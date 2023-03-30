@@ -55,12 +55,14 @@
             ZIndex: =4
 
         Button20 As button:
-            Height: =72
+            Height: =65
             OnSelect: =UpdateWorkOrderProductLineStatus.Run(ThisItem.'Work Order Product')
             Size: =24
             Text: ="Line Status"
+            Visible: =ThisItem.
             Width: =193
             X: =447
+            Y: =15
             ZIndex: =5
 
     Icon19 As icon.BackArrow:
