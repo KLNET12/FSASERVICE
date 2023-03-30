@@ -61,6 +61,7 @@ ServicesScreen As screen:
             OnSelect: =UpdateWorkOderServicesLineStatus.Run(ThisItem.'Work Order Service')
             Size: =24
             Text: ="Line Status"
+            Visible: =If(Label17.Text=Label36.Text,true,false)
             Width: =195
             X: =444
             Y: =16
@@ -119,4 +120,14 @@ ServicesScreen As screen:
         X: =20
         Y: =92
         ZIndex: =6
+
+    Label36_1 As label:
+        Height: =70
+        Size: =21
+        Text: ="Completed"
+        Visible: =false
+        Width: =560
+        X: =16
+        Y: =567
+        ZIndex: =7
 

@@ -54,13 +54,15 @@
             Y: =Parent.TemplateHeight - 1
             ZIndex: =4
 
-        Button20 As button:
+        Button14 As button:
+            Color: =Color.Red
+            Fill: =RGBA(54, 176, 75, 1)
             Height: =72
-            OnSelect: =UpdateWorkOrderProductLineStatus.Run(ThisItem.'Work Order Product')
             Size: =24
             Text: ="Line Status"
-            Width: =193
-            X: =447
+            Visible: =If(Label17.Text=Label36.Text,true,false)
+            Width: =211
+            X: =429
             ZIndex: =5
 
     Icon19 As icon.BackArrow:
@@ -70,4 +72,14 @@
         X: =576
         Y: =4
         ZIndex: =2
+
+    Label36 As label:
+        Height: =70
+        Size: =21
+        Text: ="Completed"
+        Visible: =false
+        Width: =560
+        X: =16
+        Y: =567
+        ZIndex: =3
 
