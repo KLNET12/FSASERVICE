@@ -298,8 +298,7 @@
         "Y",
         "Width",
         "Height",
-        "ZIndex",
-        "Visible"
+        "ZIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate15",
       "HasDynamicProperties": false,
@@ -433,11 +432,6 @@
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
