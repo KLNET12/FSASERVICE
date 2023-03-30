@@ -1,0 +1,73 @@
+"'Work Oder Product Screen' As screen":
+
+    Label32 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 18, 107, 1)
+        Height: =60
+        Size: =21
+        Text: ="Work Order Product"
+        Width: =640
+        Y: =4
+        ZIndex: =1
+
+    "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =1068
+        Items: =Filter('Work Order Products', 'Work Order'.'Work Order Number' = Gallery1.Selected.'Work Order'.'Work Order Number')
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Y: =68
+        ZIndex: =1
+
+        Title8 As label:
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =312
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Description
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title8.Y + Title8.Height + 4
+            ZIndex: =2
+
+        Separator22 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+        Button20 As button:
+            Height: =72
+            OnSelect: =UpdateWorkOrderProductLineStatus.Run(ThisItem.'Work Order Product')
+            Size: =24
+            Text: ="Line Status"
+            Width: =193
+            X: =447
+            ZIndex: =5
+
+    Icon19 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(UpdateBooking)
+        X: =576
+        Y: =4
+        ZIndex: =2
+

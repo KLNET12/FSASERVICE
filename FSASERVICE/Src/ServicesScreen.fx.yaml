@@ -13,17 +13,16 @@ ServicesScreen As screen:
             Clear(OfflinePictureSignature);Notify("Data is Updated Online Successfully",NotificationType.Success)
         );)
 
-    "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+    "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         Height: =987
-        Items: =Filter('Work Order Service Tasks', 'Work Order'.'Work Order Number' = Gallery1.Selected.'Work Order'.'Work Order Number')
+        Items: =Filter('Work Order Services', 'Work Order'.'Work Order Number' = Gallery1.Selected.'Work Order'.'Work Order Number')
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =232
+        TemplateSize: =Min(104, Self.Height - 60)
         Y: =149
         ZIndex: =1
 
-        Title4 As label:
-            Height: =87
+        Title10 As label:
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -31,12 +30,13 @@ ServicesScreen As screen:
             PaddingTop: =0
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
-            Width: =543
-            X: =97
+            Width: =412
+            X: =32
             Y: =16
             ZIndex: =1
 
-        Subtitle2 As label:
+        Subtitle6 As label:
+            Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -44,38 +44,27 @@ ServicesScreen As screen:
             PaddingTop: =0
             Text: =ThisItem.'Work Order'.'Work Order Number'
             VerticalAlign: =VerticalAlign.Top
-            Width: =172
-            X: =375
-            Y: =134
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title10.Y + Title10.Height + 4
             ZIndex: =2
 
-        Separator16 As rectangle:
+        Separator24 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+        Button21 As button:
+            Height: =62
+            OnSelect: =UpdateWorkOderServicesLineStatus.Run(ThisItem.'Work Order Service')
+            Size: =24
+            Text: ="Line Status"
+            Width: =195
+            X: =444
+            Y: =16
             ZIndex: =5
-
-        Label17 As label:
-            Height: =56
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: |-
-                ="Work Order Number:"
-            Width: =296
-            X: =84
-            Y: =118
-            ZIndex: =6
-
-        Checkbox1 As checkbox:
-            Default: =If(ThisItem.'% Complete'=100,true,false)
-            DisplayMode: =DisplayMode.View
-            Height: =85
-            Size: =21
-            Text: =ThisItem.'% Complete'
-            Width: =70
-            Y: =61
-            ZIndex: =7
 
     Label1_1 As label:
         Align: =Align.Center

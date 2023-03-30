@@ -58,7 +58,7 @@
         "Name": "Rectangle2",
         "Parent": "LoadingComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 944,
+        "PublishOrderIndex": 952,
         "Rules": [
           {
             "Category": "Design",
@@ -235,7 +235,7 @@
         "Name": "Image2",
         "Parent": "LoadingComponent",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 945,
+        "PublishOrderIndex": 953,
         "Rules": [
           {
             "Category": "Data",
@@ -437,7 +437,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638157563812744297",
+    "LastModifiedTimestamp": "638157573252451327",
     "Name": "LoadingComponent",
     "Rules": [
       {
@@ -496,7 +496,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638157563812744297",
+  "LastModifiedTimestamp": "638157573252451327",
   "Name": "0b13d731e5cf4b9eb2b96fd83782f4f3",
   "OverridableProperties": {},
   "Version": "638152588981105685"
